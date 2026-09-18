@@ -2,7 +2,7 @@
 <html style="color-scheme: light;"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><title>GitBrief — Case study · Working prototype</title><meta name="description" content="A week of developer activity, turned into a brief a non-technical leader can read and check. Product design case study by Adnan Asif Khan."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Inter+Tight:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><style>
+<style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><title>GitBrief — Case study · Working prototype</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23FBFAF7'/%3E%3Ctext x='32' y='47' text-anchor='middle' font-family='Georgia,serif' font-size='44' fill='%231F4E79'%3Ea%3C/text%3E%3C/svg%3E"><meta name="description" content="A week of developer activity, turned into a brief a non-technical leader can read and check. Product design case study by Adnan Asif Khan."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=Inter+Tight:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><style>
   body { margin: 0; background: #FBFAF7; -webkit-font-smoothing: antialiased; }
   a { color: #1F4E79; text-decoration: none; border-bottom: 1px solid rgba(31,78,121,0.35); }
   a:hover { color: #16385A; border-bottom-color: #16385A; }
@@ -24,8 +24,12 @@
     [data-m="sec"] { padding: 56px 0 !important; }
     [data-m="cta"] { flex-direction: column !important; align-items: stretch !important; }
     [data-m="btn"] { justify-content: center !important; }
-    [data-m="shot"] { height: 200px !important; }
+    [data-m="shot"] { height: 200px !important; max-width: 100%; }
+    [data-m="shot"] iframe { transform: scale(0.23) !important; }
+    [data-m="dot"][data-side="l"] { transform: translate(0, -50%) !important; }
+    [data-m="dot"][data-side="r"] { transform: translate(-100%, -50%) !important; }
   }
+  [data-m="flinks"] a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 2px; }
 </style></head>
 <body>
 <div id="dc-root"><div class="sc-host"><div style="font-family: &quot;Inter Tight&quot;, system-ui, sans-serif; color: rgb(23, 21, 18); background: rgb(251, 250, 247); position: relative;">
@@ -60,7 +64,7 @@
         </div>
         <div style="display: grid; grid-template-columns: 92px minmax(0px, 1fr); gap: 16px; padding: 18px 0px 18px 24px; border-bottom: 1px solid rgb(228, 224, 214); border-left: 1px solid rgb(228, 224, 214);">
           <div style="font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(142, 137, 126); padding-top: 3px;">Timeline</div>
-          <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 14px; line-height: 1.5; color: rgb(23, 21, 18);">July – August 2026</div>
+          <div style="font-family: Newsreader, serif; font-size: 17px; line-height: 1.4; color: rgb(23, 21, 18);">July – September 2026</div>
         </div>
         <div style="display: grid; grid-template-columns: 92px minmax(0px, 1fr); gap: 16px; padding: 18px 24px 18px 0px; border-bottom: 1px solid rgb(228, 224, 214);">
           <div style="font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: rgb(142, 137, 126); padding-top: 3px;">Tools</div>
@@ -70,7 +74,7 @@
       </div>
 
       <div data-m="cta" style="display: flex; gap: 14px; margin-top: 40px; align-items: center; flex-wrap: wrap;">
-        <a data-m="btn" href="Auth.html" style="display: inline-flex; align-items: center; gap: 10px; background: rgb(31, 78, 121); color: rgb(251, 250, 247); border: 0px; padding: 15px 24px; font-size: 15px; font-weight: 500; min-height: 48px; box-sizing: border-box;">Try the working prototype →</a>
+        <a data-m="btn" href="Auth.html" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: rgb(31, 78, 121); color: rgb(251, 250, 247); border: 0px; padding: 15px 24px; font-size: 15px; font-weight: 500; min-height: 48px; box-sizing: border-box;">Try the working prototype →</a>
         <a data-m="btn" href="#s09" style="display: inline-flex; align-items: center; gap: 10px; color: rgb(23, 21, 18); border: 1px solid rgb(207, 201, 188); background: transparent; padding: 15px 24px; font-size: 15px; font-weight: 500; min-height: 48px; box-sizing: border-box;">Jump to what five rounds of review found ↓</a>
       </div>
     </section>
@@ -79,18 +83,18 @@
       <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(168, 163, 153); margin-bottom: 18px;">01</div>
       <h2 data-m="h2" style="font-family: Newsreader, serif; font-weight: 500; font-size: 38px; line-height: 1.12; letter-spacing: -0.02em; margin: 0px 0px 32px; max-width: 20em;">I didn't invent this problem. I watched it happen.</h2>
       <div style="max-width: 34em; display: flex; flex-direction: column; gap: 20px;">
-        <p style="font-family: Newsreader, serif; font-size: 19px; line-height: 1.62; color: rgb(43, 40, 35); margin: 0px;">At my friend's company, the CEO and a stakeholder would open the GitHub activity and come out with nothing. Commits, branches, pull requests — technically all the information was right there. Practically, none of it was. So they did what non-technical people always do: they called a meeting. Who did what? How much is done? How long, every week, just to translate a tool into a status update.</p>
+        <p style="font-family: Newsreader, serif; font-size: 19px; line-height: 1.62; color: rgb(43, 40, 35); margin: 0px;">At my friend's company, the CEO and a stakeholder would open the GitHub activity and come out with nothing. Commits, branches, pull requests — technically all the information was right there. Practically, none of it was. So they did what non-technical people always do: they called a meeting. Who did what? How much is done? How long, every week, just to translate a tool into a status update?</p>
         <p style="font-family: Newsreader, serif; font-size: 24px; line-height: 1.4; color: rgb(23, 21, 18); margin: 0px; font-style: italic;">The progress existed. The understanding didn't.</p>
         <p style="font-family: Newsreader, serif; font-size: 19px; line-height: 1.62; color: rgb(43, 40, 35); margin: 0px;">Nobody hid anything. Engineers were writing exactly the way they should — for the people who'll read it next, other engineers. The problem is that nobody writes the same update again, in a different language, for the one person who most needs to rely on it.</p>
       </div>
 
       <div data-m="two" style="display: grid; grid-template-columns: repeat(2, minmax(0px, 1fr)); gap: 1px; background: rgb(228, 224, 214); border: 1px solid rgb(228, 224, 214); margin-top: 44px;">
         <div style="background: rgb(245, 242, 234); padding: 28px;">
-          <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: rgb(142, 137, 126); margin-bottom: 20px;">What is there</div>
+          <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: rgb(142, 137, 126); margin-bottom: 20px;">What is there</div>
           <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12.5px; line-height: 2; color: rgb(61, 58, 51);">#312 feat(checkout): split payment intent · merged<br>#309 fix(auth): refresh token race · merged<br>#314 chore: bump stripe sdk 12.4.0 · open<br>#311 refactor(cart): extract totals reducer · review<br>fix/webhook-retry · 6 commits · no PR</div>
         </div>
         <div style="background: rgb(251, 250, 247); padding: 28px;">
-          <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: rgb(142, 137, 126); margin-bottom: 20px;">What was needed</div>
+          <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: rgb(142, 137, 126); margin-bottom: 20px;">What was needed</div>
           <p style="font-family: Newsreader, serif; font-size: 20px; line-height: 1.55; color: rgb(23, 21, 18); margin: 0px;">Checkout now takes split payments, and the login bug that logged people out is fixed. One branch is moving but not yet attached to anything reviewable.</p>
         </div>
       </div>
@@ -162,31 +166,31 @@
         <div data-m="quad" style="position: relative; height: 520px; border: 1px solid rgb(228, 224, 214); background: rgb(255, 255, 255);">
           <div style="position: absolute; left: 50%; top: 0px; bottom: 0px; width: 1px; background: rgb(239, 236, 228);"></div>
           <div style="position: absolute; top: 50%; left: 0px; right: 0px; height: 1px; background: rgb(239, 236, 228);"></div>
-            <div style="position: absolute; left: 16%; top: 16%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 9px; white-space: nowrap;">
+            <div data-m="dot" data-side="l" style="position: absolute; left: 16%; top: 16%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 9px; white-space: nowrap;">
               <div style="flex: 0 0 auto; width: 11px; height: 11px; border-radius: 50%; background: rgb(31, 78, 121);"></div>
               <div style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 16px; font-weight: 600; color: rgb(31, 78, 121);">GitBrief</div>
             </div>
-            <div style="position: absolute; left: 20%; top: 74%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 9px; white-space: nowrap;">
+            <div data-m="dot" data-side="l" style="position: absolute; left: 20%; top: 74%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 9px; white-space: nowrap;">
               <div style="flex: 0 0 auto; width: 7px; height: 7px; border-radius: 50%; background: rgb(176, 170, 160);"></div>
               <div style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13px; font-weight: 400; color: rgb(110, 106, 97);">Gitmore</div>
             </div>
-            <div style="position: absolute; left: 31%; top: 84%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 9px; white-space: nowrap;">
+            <div data-m="dot" data-side="l" style="position: absolute; left: 31%; top: 84%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 9px; white-space: nowrap;">
               <div style="flex: 0 0 auto; width: 7px; height: 7px; border-radius: 50%; background: rgb(176, 170, 160);"></div>
               <div style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13px; font-weight: 400; color: rgb(110, 106, 97);">Git Digest</div>
             </div>
-            <div style="position: absolute; left: 12%; top: 62%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 9px; white-space: nowrap;">
+            <div data-m="dot" data-side="l" style="position: absolute; left: 12%; top: 62%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 9px; white-space: nowrap;">
               <div style="flex: 0 0 auto; width: 7px; height: 7px; border-radius: 50%; background: rgb(176, 170, 160);"></div>
               <div style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13px; font-weight: 400; color: rgb(110, 106, 97);">Standup bots</div>
             </div>
-            <div style="position: absolute; left: 82%; top: 34%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 9px; white-space: nowrap;">
+            <div data-m="dot" data-side="r" style="position: absolute; left: 82%; top: 34%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 9px; white-space: nowrap;">
               <div style="flex: 0 0 auto; width: 7px; height: 7px; border-radius: 50%; background: rgb(176, 170, 160);"></div>
               <div style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13px; font-weight: 400; color: rgb(110, 106, 97);">Jellyfish</div>
             </div>
-            <div style="position: absolute; left: 72%; top: 46%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 9px; white-space: nowrap;">
+            <div data-m="dot" data-side="r" style="position: absolute; left: 72%; top: 46%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 9px; white-space: nowrap;">
               <div style="flex: 0 0 auto; width: 7px; height: 7px; border-radius: 50%; background: rgb(176, 170, 160);"></div>
               <div style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13px; font-weight: 400; color: rgb(110, 106, 97);">LinearB</div>
             </div>
-            <div style="position: absolute; left: 88%; top: 24%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 9px; white-space: nowrap;">
+            <div data-m="dot" data-side="r" style="position: absolute; left: 88%; top: 24%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 9px; white-space: nowrap;">
               <div style="flex: 0 0 auto; width: 7px; height: 7px; border-radius: 50%; background: rgb(176, 170, 160);"></div>
               <div style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13px; font-weight: 400; color: rgb(110, 106, 97);">Swarmia</div>
             </div>
@@ -249,7 +253,7 @@
           </div>
           <div style="grid-column: 1 / -1;">
             <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: rgb(142, 137, 126); margin-bottom: 14px;">The rejected version</div>
-            <img src="uploads/IMG-20260727-WA0035.jpg" alt="An earlier dashboard build: lines of code, commits per day, and a commits-by-type chart" style="display: block; width: 100%; height: auto; box-sizing: border-box; border: 1px solid rgb(228, 224, 214);">
+            <img src="uploads/rejected-dashboard-build.jpg" alt="An earlier dashboard build: lines of code, commits per day, and a commits-by-type chart" style="display: block; width: 100%; height: auto; box-sizing: border-box; border: 1px solid rgb(228, 224, 214);">
             <div style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px; line-height: 1.6; color: rgb(110, 106, 97); margin-top: 12px; max-width: 46em;">The first build, before the memo. Lines of code, commits per day, commits by type — every number correct, and none of it answers whether the work is on track. It also counts people, which the fourth constraint rules out.</div>
           </div>
           <div style="grid-column: 1 / -1; font-family: Newsreader, serif; font-size: 18px; line-height: 1.6; color: rgb(85, 81, 74); font-style: italic; max-width: 40em;">Honest note: the plainness has a cost. It can look template-y at first glance. I chose being understood over looking impressive, and I'd choose it again.</div>
@@ -320,12 +324,12 @@
         </div>
         <div data-m="proof" style="display: grid; grid-template-columns: minmax(0px, 1.35fr) minmax(0px, 1fr);">
           <div style="padding: 30px;">
-              <p style="font-family: Newsreader, serif; font-size: 19px; line-height: 1.65; color: rgb(43, 40, 35); margin: 0px 0px 16px;">Checkout can now take a payment in two parts, which unblocks the enterprise invoices. <button data-m="tap" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; line-height: 1; vertical-align: super; cursor: pointer; padding: 4px 7px; border-radius: 3px; border: 1px solid rgba(31, 78, 121, 0.35); background: transparent; color: rgb(31, 78, 121);">1</button></p>
-              <p style="font-family: Newsreader, serif; font-size: 19px; line-height: 1.65; color: rgb(43, 40, 35); margin: 0px 0px 16px;">The bug that logged people out mid-session is closed. <button data-m="tap" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; line-height: 1; vertical-align: super; cursor: pointer; padding: 4px 7px; border-radius: 3px; border: 1px solid rgba(31, 78, 121, 0.35); background: transparent; color: rgb(31, 78, 121);">2</button></p>
-              <p style="font-family: Newsreader, serif; font-size: 19px; line-height: 1.65; color: rgb(43, 40, 35); margin: 0px 0px 16px;">The cart rewrite is written and waiting on review, not stuck. <button data-m="tap" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; line-height: 1; vertical-align: super; cursor: pointer; padding: 4px 7px; border-radius: 3px; border: 1px solid rgba(31, 78, 121, 0.35); background: transparent; color: rgb(31, 78, 121);">3</button></p>
+              <p style="font-family: Newsreader, serif; font-size: 19px; line-height: 1.65; color: rgb(43, 40, 35); margin: 0px 0px 16px;">The new checkout flow is live for all customers. <button data-m="tap" data-mark="1" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; line-height: 1; vertical-align: super; cursor: pointer; padding: 4px 7px; border-radius: 3px; border: 1px solid rgba(31, 78, 121, 0.35); background: transparent; color: rgb(31, 78, 121);">1</button></p>
+              <p style="font-family: Newsreader, serif; font-size: 19px; line-height: 1.65; color: rgb(43, 40, 35); margin: 0px 0px 16px;">Invoice exports are open for review; no reviewer has been assigned for three days. <button data-m="tap" data-mark="2" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; line-height: 1; vertical-align: super; cursor: pointer; padding: 4px 7px; border-radius: 3px; border: 1px solid rgba(31, 78, 121, 0.35); background: transparent; color: rgb(31, 78, 121);">2</button></p>
+              <p style="font-family: Newsreader, serif; font-size: 19px; line-height: 1.65; color: rgb(43, 40, 35); margin: 0px 0px 16px;">Tax handling has had no activity since Sep 8; the team notes it was paused by agreement. <button data-m="tap" data-mark="3" style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 11px; line-height: 1; vertical-align: super; cursor: pointer; padding: 4px 7px; border-radius: 3px; border: 1px solid rgba(31, 78, 121, 0.35); background: transparent; color: rgb(31, 78, 121);">3</button></p>
             <p style="font-family: Newsreader, serif; font-size: 19px; line-height: 1.65; color: rgb(110, 106, 97); margin: 22px 0px 0px; font-style: italic;">One item couldn't be placed with confidence: a branch named <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 15px; font-style: normal;">fix/webhook-retry</span> has commits but no pull request, so this brief leaves it out rather than guess.</p>
           </div>
-          <div data-m="evp" data-open="0" style="border-left: 1px solid rgb(228, 224, 214); background: rgb(245, 242, 234); padding: 26px;">
+          <div data-m="evp" id="evp" data-open="0" style="border-left: 1px solid rgb(228, 224, 214); background: rgb(245, 242, 234); padding: 26px;">
             <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: rgb(142, 137, 126); margin-bottom: 16px;">Evidence</div>
             <div style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px; line-height: 1.55; color: rgb(142, 137, 126);">Click a numbered mark in the brief to see what it is based on.</div>
           </div>
@@ -338,14 +342,14 @@
             <div style="font-size: 15px; font-weight: 600; color: rgb(23, 21, 18);">Light and dark, live</div>
             <div style="font-size: 13.5px; color: rgb(110, 106, 97); margin-top: 4px;">Only colour changes. The type roles and the layout hold.</div>
           </div>
-          <button data-m="tap" style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px; font-weight: 500; padding: 11px 18px; min-height: 44px; border: 1px solid rgb(207, 201, 188); background: transparent; color: rgb(23, 21, 18); cursor: pointer;">Switch to dark</button>
+          <button data-m="tap" id="themeBtn" style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px; font-weight: 500; padding: 11px 18px; min-height: 44px; border: 1px solid rgb(207, 201, 188); background: transparent; color: rgb(23, 21, 18); cursor: pointer;">Switch to dark</button>
         </div>
         <div style="padding: 30px;">
-          <div style="border: 1px solid rgb(228, 224, 214); background: rgb(255, 255, 255); padding: 28px; transition: background 400ms, border-color 400ms;">
-            <div style="transition: color 400ms; color: rgb(142, 137, 126); font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 11.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 16px;">Friday brief · week of <span style="font-family: &quot;JetBrains Mono&quot;, monospace;">1 Aug 2026</span></div>
-            <div style="transition: color 400ms; color: rgb(23, 21, 18); font-family: Newsreader, serif; font-size: 25px; line-height: 1.35; margin-bottom: 14px;">Checkout took split payments this week, and the login bug is closed.</div>
-            <div style="transition: color 400ms; color: rgb(85, 81, 74); font-family: Newsreader, serif; font-size: 18px; line-height: 1.6; margin-bottom: 20px;">Alex Morgan merged the split payment intent and the auth refresh fix. The cart totals refactor is in review. Nothing is waiting on anyone.</div>
-            <div style="transition: color 400ms; color: rgb(142, 137, 126); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12.5px;">3 merged · 1 in review · 0 with no activity</div>
+          <div id="demoCard" style="border: 1px solid rgb(228, 224, 214); background: rgb(255, 255, 255); padding: 28px; transition: background 400ms, border-color 400ms;">
+            <div style="transition: color 400ms; color: rgb(142, 137, 126); font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 11.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 16px;">Friday brief · <span style="font-family: &quot;JetBrains Mono&quot;, monospace;">Sep 7–13, 2026</span></div>
+            <div style="transition: color 400ms; color: rgb(23, 21, 18); font-family: Newsreader, serif; font-size: 25px; line-height: 1.35; margin-bottom: 14px;">Checkout went live; invoice exports are open for review</div>
+            <div style="transition: color 400ms; color: rgb(85, 81, 74); font-family: Newsreader, serif; font-size: 18px; line-height: 1.6; margin-bottom: 20px;">The new checkout flow reached all customers. Invoice exports are open for review with no reviewer assigned. Tax handling has had no activity since Sep 8. Nothing is stuck.</div>
+            <div style="transition: color 400ms; color: rgb(142, 137, 126); font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12.5px;">2 merged · 1 in review · 1 with no activity since Sep 8</div>
           </div>
         </div>
       </div>
@@ -358,14 +362,15 @@
         <div style="padding: 30px;">
           <div style="border: 1px solid rgb(228, 224, 214); background: rgb(251, 250, 247); padding: 22px;">
             <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 16px;">
-              <div style="font-family: Newsreader, serif; font-size: 19px; line-height: 1.6; color: rgb(43, 40, 35);">Checkout can now take a payment in two parts, which unblocks the enterprise invoices.</div>
-              <div style="flex: 0 0 auto; font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; padding: 5px 10px; border-radius: 999px; border: 1px solid rgba(31, 78, 121, 0.3); background: rgba(31, 78, 121, 0.07); color: rgb(31, 78, 121);">2 sources</div>
+              <div style="font-family: Newsreader, serif; font-size: 19px; line-height: 1.6; color: rgb(43, 40, 35);" id="editSentence">The new checkout flow is live for all customers.</div>
+              <div style="flex: 0 0 auto; font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; padding: 5px 10px; border-radius: 999px; border: 1px solid rgba(31, 78, 121, 0.3); background: rgba(31, 78, 121, 0.07); color: rgb(31, 78, 121);" id="editBadge">2 sources</div>
             </div>
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-              <button data-m="tap" style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px; font-weight: 500; padding: 11px 18px; min-height: 44px; border: 1px solid rgb(207, 201, 188); background: transparent; color: rgb(23, 21, 18); cursor: pointer;">Edit this sentence</button>
-              <button data-m="tap" style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px; padding: 11px 18px; min-height: 44px; border: 0px; background: transparent; color: rgb(110, 106, 97); cursor: pointer;">Reset</button>
+              <button data-m="tap" style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px; font-weight: 500; padding: 11px 18px; min-height: 44px; border: 1px solid rgb(207, 201, 188); background: transparent; color: rgb(23, 21, 18); cursor: pointer;" id="editBtn">Edit this sentence</button>
+              <button data-m="tap" style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px; padding: 11px 18px; min-height: 44px; border: 0px; background: transparent; color: rgb(110, 106, 97); cursor: pointer;" id="resetBtn">Reset</button>
             </div>
           </div>
+          <div id="editDialog"></div>
         </div>
       </div>
     </section>
@@ -430,35 +435,35 @@
           <div data-m="shot" style="height: 260px; overflow: hidden; border: 1px solid rgb(228, 224, 214); background: rgb(255, 255, 255); position: relative;">
             <iframe src="Friday Brief Email.html" title="The Friday email" scrolling="no" style="width: 1280px; height: 1600px; transform: scale(0.28); transform-origin: left top; pointer-events: none;"></iframe>
           </div>
-          <div>
+          <div style="display: flex; flex-direction: column; flex: 1 1 auto;">
             <div style="font-family: Newsreader, serif; font-size: 21px; line-height: 1.3; color: rgb(23, 21, 18); margin-bottom: 8px;">The Friday email</div>
             <div style="font-family: Newsreader, serif; font-size: 16.5px; line-height: 1.55; color: rgb(85, 81, 74); margin-bottom: 12px;">Most readers will never open the app, so the whole brief has to survive inside an email client, including the numbered links to proof.</div>
-            <a href="Friday Brief Email.html" style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px; font-weight: 500;">Open full size →</a>
+            <a href="Friday Brief Email.html" target="_blank" rel="noopener" style="margin-top: auto; align-self: flex-start; font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px; font-weight: 500;">Open full size →</a>
           </div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 16px;">
           <div data-m="shot" style="height: 260px; overflow: hidden; border: 1px solid rgb(228, 224, 214); background: rgb(255, 255, 255); position: relative;">
             <iframe src="Home Brief.html" title="Home brief" scrolling="no" style="width: 1440px; height: 1400px; transform: scale(0.25); transform-origin: left top; pointer-events: none;"></iframe>
           </div>
-          <div>
+          <div style="display: flex; flex-direction: column; flex: 1 1 auto;">
             <div style="font-family: Newsreader, serif; font-size: 21px; line-height: 1.3; color: rgb(23, 21, 18); margin-bottom: 8px;">Home brief</div>
             <div style="font-family: Newsreader, serif; font-size: 16.5px; line-height: 1.55; color: rgb(85, 81, 74); margin-bottom: 12px;">The brief sits in the middle with nothing competing; navigation is a quiet column, not a row of charts. The audience picker changes what is said, not just how much: the client version hides internal repository names and work states entirely, showing progress and honest slippage notes only.</div>
-            <a href="Home Brief.html" style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px; font-weight: 500;">Open full size →</a>
+            <a href="Home Brief.html" target="_blank" rel="noopener" style="margin-top: auto; align-self: flex-start; font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px; font-weight: 500;">Open full size →</a>
           </div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 16px;">
           <div data-m="shot" style="height: 260px; overflow: hidden; border: 1px solid rgb(228, 224, 214); background: rgb(255, 255, 255); position: relative;">
             <iframe src="Developer View.html" title="Developer view" scrolling="no" style="width: 1440px; height: 1400px; transform: scale(0.25); transform-origin: left top; pointer-events: none;"></iframe>
           </div>
-          <div>
+          <div style="display: flex; flex-direction: column; flex: 1 1 auto;">
             <div style="font-family: Newsreader, serif; font-size: 21px; line-height: 1.3; color: rgb(23, 21, 18); margin-bottom: 8px;">Developer view</div>
             <div style="font-family: Newsreader, serif; font-size: 16.5px; line-height: 1.55; color: rgb(85, 81, 74); margin-bottom: 12px;">Engineers see the exact brief leadership receives, so nobody is surprised by a summary of their work they never saw.</div>
-            <a href="Developer View.html" style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px; font-weight: 500;">Open full size →</a>
+            <a href="Developer View.html" target="_blank" rel="noopener" style="margin-top: auto; align-self: flex-start; font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px; font-weight: 500;">Open full size →</a>
           </div>
         </div>
       </div>
       <div style="margin-top: 32px;">
-        <a href="Auth.html" style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 15px; font-weight: 500;">All screens and states, in the working prototype →</a>
+        <a href="Auth.html" target="_blank" rel="noopener" style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 15px; font-weight: 500;">All screens and states, in the working prototype →</a>
       </div>
     </section>
 
@@ -506,7 +511,7 @@
         <div style="font-family: Newsreader, serif; font-size: 20px; color: rgb(23, 21, 18);">Adnan Asif Khan</div>
         <div style="font-size: 13.5px; color: rgb(110, 106, 97); margin-top: 5px;">Product / UX Designer</div>
       </div>
-      <div style="display: flex; gap: 22px; flex-wrap: wrap; font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px;">
+      <div data-m="flinks" style="display: flex; gap: 22px; flex-wrap: wrap; font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px;">
         <a href="mailto:adnanasifkhan24@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/adnanasifkhan" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://uxadnan.framer.website" target="_blank" rel="noopener">Portfolio</a>
@@ -514,4 +519,75 @@
       </div>
     </div>
   </footer></div></div></div>
+
+<script>
+(function(){
+  var EV = {
+    1: { q: "The new checkout flow is live for all customers.", items: [
+      ["PR #412", "feat(checkout): new flow behind full rollout flag", "merged Sep 10 · a4f19c2"],
+      ["PR #418", "chore(checkout): remove legacy flow", "merged Sep 11 · 7d02be1"] ] },
+    2: { q: "Invoice exports are open for review; no reviewer has been assigned for three days.", items: [
+      ["PR #421", "feat(invoices): CSV and PDF export", "opened Sep 10 · no reviewer assigned"] ] },
+    3: { q: "Tax handling has had no activity since Sep 8; the team notes it was paused by agreement.", items: [
+      ["a91f2c4", "wip(tax): region lookup table", "last commit Sep 8 · branch open, no pull request"] ],
+      thin: "Thin evidence: an absence of commits, not a statement from the team. The pause note is a team note, added by Tomasz (engineering) on Sep 10." }
+  };
+  var evp = document.getElementById("evp");
+  var marks = document.querySelectorAll("[data-mark]");
+  function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+  function openEv(n){
+    var e = EV[n]; if (!e) return;
+    var h = '<div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: rgb(142, 137, 126); margin-bottom: 16px;">Evidence for mark ' + n + '</div>';
+    h += '<div style="font-family: Newsreader, serif; font-style: italic; font-size: 15.5px; line-height: 1.5; color: rgb(85, 81, 74); margin-bottom: 14px;">\u201c' + esc(e.q) + '\u201d</div>';
+    e.items.forEach(function(it){
+      h += '<div style="border-top: 1px solid rgb(228, 224, 214); padding: 14px 0;">'
+        + '<div style="font-family: \'JetBrains Mono\', monospace; font-size: 12.5px; color: rgb(31, 78, 121); margin-bottom: 5px;">' + esc(it[0]) + '</div>'
+        + '<div style="font-family: Newsreader, serif; font-size: 16px; line-height: 1.5; color: rgb(23, 21, 18);">' + esc(it[1]) + '</div>'
+        + '<div style="font-family: \'JetBrains Mono\', monospace; font-size: 11.5px; color: rgb(142, 137, 126); margin-top: 5px;">' + esc(it[2]) + '</div></div>';
+    });
+    if (e.thin) h += '<div style="border-top: 1px solid rgb(228, 224, 214); padding-top: 14px; font-family: Newsreader, serif; font-style: italic; font-size: 15px; line-height: 1.55; color: rgb(138, 100, 32);">' + esc(e.thin) + '</div>';
+    evp.innerHTML = h; evp.setAttribute("data-open", "1");
+    for (var i = 0; i < marks.length; i++) {
+      var on = marks[i].getAttribute("data-mark") === String(n);
+      marks[i].style.background = on ? "rgb(31, 78, 121)" : "transparent";
+      marks[i].style.color = on ? "rgb(251, 250, 247)" : "rgb(31, 78, 121)";
+    }
+  }
+  for (var i = 0; i < marks.length; i++) marks[i].addEventListener("click", function(){ openEv(this.getAttribute("data-mark")); });
+
+  var dark = false, card = document.getElementById("demoCard"), btn = document.getElementById("themeBtn");
+  var L = ["rgb(142, 137, 126)", "rgb(23, 21, 18)", "rgb(85, 81, 74)", "rgb(142, 137, 126)"];
+  var D = ["rgb(142, 137, 126)", "rgb(244, 241, 234)", "rgb(183, 177, 166)", "rgb(126, 120, 109)"];
+  btn.addEventListener("click", function(){
+    dark = !dark;
+    card.style.background = dark ? "rgb(23, 21, 18)" : "rgb(255, 255, 255)";
+    card.style.borderColor = dark ? "rgb(46, 44, 40)" : "rgb(228, 224, 214)";
+    var kids = card.children, pal = dark ? D : L;
+    for (var k = 0; k < kids.length; k++) kids[k].style.color = pal[k] || pal[pal.length - 1];
+    btn.textContent = dark ? "Switch to light" : "Switch to dark";
+  });
+
+  var ORIG = "The new checkout flow is live for all customers.", EDITED = "The new checkout flow is live for everyone \u2014 no more legacy checkout.";
+  var sent = document.getElementById("editSentence"), badge = document.getElementById("editBadge"), dlg = document.getElementById("editDialog");
+  function badgeState(s){
+    if (s === "dropped") { badge.textContent = "Unverified"; badge.style.cssText = badge.style.cssText.replace(/border-color:[^;]+;|background:[^;]+;|color:[^;]+;/g, "") + "border-color: rgb(239, 201, 192); background: rgb(251, 235, 232); color: rgb(180, 70, 47);"; }
+    else { badge.textContent = "2 sources"; badge.style.cssText = badge.style.cssText.replace(/border-color:[^;]+;|background:[^;]+;|color:[^;]+;/g, "") + "border-color: rgba(31, 78, 121, 0.3); background: rgba(31, 78, 121, 0.07); color: rgb(31, 78, 121);"; }
+  }
+  var B = 'font-family: \'Inter Tight\', sans-serif; font-size: 13.5px; font-weight: 500; padding: 12px 20px; min-height: 44px; cursor: pointer;';
+  function msg(text){
+    dlg.innerHTML = '<div style="margin-top: 18px; border: 1px solid rgb(228, 224, 214); background: rgb(255, 255, 255); padding: 18px 24px; font-family: \'Inter Tight\', sans-serif; font-size: 14px; line-height: 1.6; color: rgb(85, 81, 74);">' + text + '</div>';
+  }
+  document.getElementById("editBtn").addEventListener("click", function(){
+    sent.textContent = EDITED; sent.contentEditable = "true"; sent.style.outline = "1px dashed rgb(31, 78, 121)"; sent.style.outlineOffset = "4px"; sent.focus();
+    dlg.innerHTML = '<div style="margin-top: 18px; border: 1px solid rgb(31, 78, 121); background: rgb(255, 255, 255); padding: 24px; box-shadow: rgba(0,0,0,0.08) 0 4px 8px 3px;">'
+      + '<div style="font-family: Newsreader, serif; font-size: 21px; line-height: 1.35; color: rgb(23, 21, 18); margin-bottom: 8px;">Keep the original evidence link for this sentence?</div>'
+      + '<div style="font-family: \'Inter Tight\', sans-serif; font-size: 14px; line-height: 1.6; color: rgb(85, 81, 74); margin-bottom: 20px; max-width: 40em;">Keep it and the two proof marks stay attached to your wording. Remove it and this line is marked unverified for whoever reads it.</div>'
+      + '<div style="display: flex; gap: 10px; flex-wrap: wrap;"><button id="keepBtn" style="' + B + ' border: 0; background: rgb(31, 78, 121); color: rgb(251, 250, 247);">Keep</button>'
+      + '<button id="dropBtn" style="' + B + ' border: 1px solid rgb(207, 201, 188); background: transparent; color: rgb(23, 21, 18);">Remove</button></div></div>';
+    document.getElementById("keepBtn").addEventListener("click", function(){ sent.contentEditable = "false"; sent.style.outline = ""; badgeState("kept"); msg("Sources kept. The two proof marks stay attached to your wording, and readers can still open PR #412 and PR #418 behind it."); });
+    document.getElementById("dropBtn").addEventListener("click", function(){ sent.contentEditable = "false"; sent.style.outline = ""; badgeState("dropped"); msg("Sources removed. This line now goes out marked <strong style=\"color: rgb(180, 70, 47);\">Unverified</strong> in every version, so no reader mistakes your wording for something GitBrief checked."); });
+  });
+  document.getElementById("resetBtn").addEventListener("click", function(){ sent.textContent = ORIG; sent.contentEditable = "false"; sent.style.outline = ""; badgeState("kept"); dlg.innerHTML = ""; });
+})();
+</script>
 </body></html>
