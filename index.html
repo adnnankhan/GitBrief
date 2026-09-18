@@ -16,7 +16,10 @@
     [data-m="lead"] { font-size: 19px !important; }
     [data-m="facts"] { grid-template-columns: minmax(0,1fr) !important; }
     [data-m="facts"] > div { border-left: 0 !important; padding-left: 0 !important; }
-    [data-m="two"], [data-m="three"], [data-m="quadgrid"] { grid-template-columns: minmax(0,1fr) !important; }
+    [data-m="two"], [data-m="three"] { grid-template-columns: minmax(0,1fr) !important; }
+    [data-m="qrow"] { grid-template-columns: minmax(0,1fr) !important; }
+    [data-m="qdiv"] { display: none !important; }
+    [data-m="qrow"] > div + div + div { border-top: 1px solid #E4E0D6; }
     [data-m="decision"] { grid-template-columns: minmax(0,1fr) !important; }
     [data-m="quad"] { height: 420px !important; }
     [data-m="proof"] { grid-template-columns: minmax(0,1fr) !important; }
@@ -209,26 +212,39 @@
     <section id="s05" data-m="sec" data-screen-label="05" style="padding: 104px 0px 0px;">
       <div style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 12px; color: rgb(168, 163, 153); margin-bottom: 18px;">05</div>
       <h2 data-m="h2" style="font-family: Newsreader, serif; font-weight: 500; font-size: 38px; line-height: 1.12; letter-spacing: -0.02em; margin: 0px 0px 40px; max-width: 22em;">Before any screen, the rules that made the job harder on purpose.</h2>
-      <div data-m="quadgrid" style="display: grid; grid-template-columns: repeat(2, minmax(0px, 1fr)); gap: 1px; background: rgb(228, 224, 214); border-top: 1px solid rgb(228, 224, 214); border-left: 1px solid rgb(228, 224, 214);">
-        <div style="background: rgb(251, 250, 247); padding: 30px;">
-          <div style="font-family: Newsreader, serif; font-size: 24px; line-height: 1.28; color: rgb(23, 21, 18); margin-bottom: 14px;">One wrong sentence costs more than ten right ones.</div>
-          <div style="font-family: Newsreader, serif; font-size: 17px; line-height: 1.6; color: rgb(85, 81, 74);">So the brief admits when activity is unclear and says so, in the brief.</div>
+      <div data-m="quadgrid" style="display: flex; flex-direction: column; border-bottom: 1px solid rgb(228, 224, 214);">
+        <div data-m="qrow" style="display: grid; grid-template-columns: minmax(0px, 1fr) 1px minmax(0px, 1fr); align-items: start; border-top: 1px solid rgb(228, 224, 214);">
+          <div style="padding: 30px;">
+            <div style="font-family: Newsreader, serif; font-size: 24px; line-height: 1.28; color: rgb(23, 21, 18); margin-bottom: 10px;">One wrong sentence costs more than ten right ones.</div>
+            <div style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 15px; font-weight: 500; line-height: 1.45; color: rgb(31, 78, 121); margin: 0 0 14px;">Cut the most demo-friendly feature because it would sometimes be wrong.</div>
+            <div style="font-family: Newsreader, serif; font-size: 17px; line-height: 1.6; color: rgb(85, 81, 74); text-wrap: pretty;">An estimated finish date was the first thing every manager asked for, and the estimates were unreliable. An AI confidently predicting a wrong date is worse than no date at all. So the brief gives status and the last real activity date, and admits when activity is unclear.</div>
+          </div>
+          <div data-m="qdiv" style="background: rgb(228, 224, 214); align-self: stretch;"></div>
+          <div style="padding: 30px;">
+            <div style="font-family: Newsreader, serif; font-size: 24px; line-height: 1.28; color: rgb(23, 21, 18); margin-bottom: 10px;">Proof makes text unreadable.</div>
+            <div style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 15px; font-weight: 500; line-height: 1.45; color: rgb(31, 78, 121); margin: 0 0 14px;">A small number after the sentence; everything else behind a click.</div>
+            <div style="font-family: Newsreader, serif; font-size: 17px; line-height: 1.6; color: rgb(85, 81, 74); text-wrap: pretty;">Links and repository names inside the sentences turned the brief back into the thing it replaced. Then a review caught the gap: most people read the email, and an email has no panel to open. So any claim on weaker evidence now carries its caveat in the sentence itself.</div>
+          </div>
         </div>
-        <div style="background: rgb(251, 250, 247); padding: 30px;">
-          <div style="font-family: Newsreader, serif; font-size: 24px; line-height: 1.28; color: rgb(23, 21, 18); margin-bottom: 14px;">Proof makes text unreadable.</div>
-          <div style="font-family: Newsreader, serif; font-size: 17px; line-height: 1.6; color: rgb(85, 81, 74);">Every claim needed a source, but links and repository names inside the sentences turned the brief back into the thing it replaced. The answer was a small number after a sentence, and everything else in a panel that only opens when asked. Then a review caught the gap in that answer: the version most people actually read is the email, and an email has no panel to open. So any claim that rests on weaker evidence now carries its caveat in the sentence itself. Whatever gets forwarded has to carry its own honesty.</div>
+        <div data-m="qrow" style="display: grid; grid-template-columns: minmax(0px, 1fr) 1px minmax(0px, 1fr); align-items: start; border-top: 1px solid rgb(228, 224, 214);">
+          <div style="padding: 30px;">
+            <div style="font-family: Newsreader, serif; font-size: 24px; line-height: 1.28; color: rgb(23, 21, 18); margin-bottom: 10px;">Letting people edit can break the proof.</div>
+            <div style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 15px; font-weight: 500; line-height: 1.45; color: rgb(31, 78, 121); margin: 0 0 14px;">Editing a sourced sentence stops and asks whether to keep the source.</div>
+            <div style="font-family: Newsreader, serif; font-size: 17px; line-height: 1.6; color: rgb(85, 81, 74); text-wrap: pretty;">Founders will reword a brief before sending it. So editing a sentence with sources attached stops and asks whether to keep or drop them, and a sentence without sources is marked unverified.</div>
+          </div>
+          <div data-m="qdiv" style="background: rgb(228, 224, 214); align-self: stretch;"></div>
+          <div style="padding: 30px;">
+            <div style="font-family: Newsreader, serif; font-size: 24px; line-height: 1.28; color: rgb(23, 21, 18); margin-bottom: 10px;">Engineers have to be safe from it.</div>
+            <div style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 15px; font-weight: 500; line-height: 1.45; color: rgb(31, 78, 121); margin: 0 0 14px;">Not scoring someone and not naming them turned out to be different things.</div>
+            <div style="font-family: Newsreader, serif; font-size: 17px; line-height: 1.6; color: rgb(85, 81, 74); text-wrap: pretty;">A tool that summarises someone's work to their boss can quietly become a performance report. So the brief never counts, compares, or ranks people. A name attached to a next action is routing; a name attached to a count is scoring. The brief does the first and never the second.</div>
+          </div>
         </div>
-        <div style="background: rgb(251, 250, 247); padding: 30px;">
-          <div style="font-family: Newsreader, serif; font-size: 24px; line-height: 1.28; color: rgb(23, 21, 18); margin-bottom: 14px;">Letting people edit can break the proof.</div>
-          <div style="font-family: Newsreader, serif; font-size: 17px; line-height: 1.6; color: rgb(85, 81, 74);">Founders will reword a brief before sending it. So editing a sentence with sources attached stops and asks whether to keep or drop them, and a sentence without sources is marked unverified.</div>
-        </div>
-        <div style="background: rgb(251, 250, 247); padding: 30px;">
-          <div style="font-family: Newsreader, serif; font-size: 24px; line-height: 1.28; color: rgb(23, 21, 18); margin-bottom: 14px;">Engineers have to be safe from it.</div>
-          <div style="font-family: Newsreader, serif; font-size: 17px; line-height: 1.6; color: rgb(85, 81, 74);">A tool that summarises someone's work to their boss can quietly become a performance report. So the brief never counts, compares, or ranks people. But a founder reading "waiting on approval" still needs to know who to ask — and refusing to say anything left that question unanswered. Not scoring someone and not naming them turned out to be different things. A name attached to a next action ("ask the reviewer") is routing. A name attached to a count is scoring. The brief does the first and never the second, and follows the team's own privacy setting on whether it shows a person or a role.</div>
-        </div>
-        <div style="background: rgb(251, 250, 247); padding: 30px;">
-          <div style="font-family: Newsreader, serif; font-size: 24px; line-height: 1.28; color: rgb(23, 21, 18); margin-bottom: 14px;">Defaults are trust decisions.</div>
-          <div style="font-family: Newsreader, serif; font-size: 17px; line-height: 1.6; color: rgb(85, 81, 74);">An automatic status update, written by software, sent to a company's board with no human reading it first — that's the exact scenario a founder fears. The first version allowed it by default. Now, any brief going to someone outside the team waits for a person to look at it before it sends. Turning that off requires saying yes to a plain warning. The product's most important trust decision isn't a feature; it's a checkbox that starts in the right position.</div>
+        <div style="border-top: 1px solid rgb(228, 224, 214);">
+          <div style="padding: 30px;">
+            <div style="font-family: Newsreader, serif; font-size: 24px; line-height: 1.28; color: rgb(23, 21, 18); margin-bottom: 10px;">Defaults are trust decisions.</div>
+            <div style="font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 15px; font-weight: 500; line-height: 1.45; color: rgb(31, 78, 121); margin: 0 0 14px;">The most important trust decision isn't a feature — it's a checkbox that starts in the right position.</div>
+            <div style="font-family: Newsreader, serif; font-size: 17px; line-height: 1.6; color: rgb(85, 81, 74); text-wrap: pretty; max-width: 46em;">An automatic status update sent to a company's board with no human reading it first is the exact scenario a founder fears. The first version allowed it by default. Now any brief going outside the team waits for a person to look at it, and turning that off means saying yes to a plain warning.</div>
+          </div>
         </div>
       </div>
     </section>
