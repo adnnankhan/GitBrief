@@ -318,6 +318,39 @@
         <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: rgb(142, 137, 126); margin-bottom: 16px;">From the prototype copy</div>
         <p style="font-family: Newsreader, serif; font-size: 22px; line-height: 1.45; color: rgb(23, 21, 18); margin: 0px;">"One item couldn't be placed with confidence: a branch named <span style="font-family: &quot;JetBrains Mono&quot;, monospace; font-size: 17px;">fix/webhook-retry</span> has commits but no pull request, so this brief leaves it out rather than guess."</p>
       </div>
+      <div style="margin-top: 56px; border-top: 1px solid #171512; padding-top: 34px">
+        <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 30px; line-height: 1.18; letter-spacing: -0.015em; color: #171512; margin: 0 0 24px">When the data is wrong</h3>
+        <div style="border-bottom: 1px solid #E4E0D6">
+          <div data-m="mhide" style="display: grid; grid-template-columns: 40px minmax(0,1fr) minmax(0,1.15fr); gap: 28px; padding: 12px 0; font-size: 10.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #8E897E">
+            <div></div><div>The state</div><div>What happens and why</div>
+          </div>
+          <div data-m="decision" style="display: grid; grid-template-columns: 40px minmax(0,1fr) minmax(0,1.15fr); gap: 8px 28px; padding: 22px 0; border-top: 1px solid #E4E0D6; align-items: baseline">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8E897E">01</div>
+            <div style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 600; line-height: 1.3; color: #171512">GitHub access expired.</div>
+            <div style="font-family: 'Inter Tight', sans-serif; font-size: 15.5px; line-height: 1.55; color: #3D3A33; text-wrap: pretty">Briefs pause until you reconnect. The screen shows the last successful sync, so you can tell how old the latest brief is, and offers one next step: Reconnect GitHub.</div>
+          </div>
+          <div data-m="decision" style="display: grid; grid-template-columns: 40px minmax(0,1fr) minmax(0,1.15fr); gap: 8px 28px; padding: 22px 0; border-top: 1px solid #E4E0D6; align-items: baseline">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8E897E">02</div>
+            <div style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 600; line-height: 1.3; color: #171512">Part of a repository couldn't be read.</div>
+            <div style="font-family: 'Inter Tight', sans-serif; font-size: 15.5px; line-height: 1.55; color: #3D3A33; text-wrap: pretty">The brief still arrives, with a note above it that names the repository and says the brief may be incomplete. The reader sees the gap before the first sentence, with Retry and View details next to it.</div>
+          </div>
+          <div data-m="decision" style="display: grid; grid-template-columns: 40px minmax(0,1fr) minmax(0,1.15fr); gap: 8px 28px; padding: 22px 0; border-top: 1px solid #E4E0D6; align-items: baseline">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8E897E">03</div>
+            <div style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 600; line-height: 1.3; color: #171512">An item can't be placed.</div>
+            <div style="font-family: 'Inter Tight', sans-serif; font-size: 15.5px; line-height: 1.55; color: #3D3A33; text-wrap: pretty">A branch with commits but no pull request is left out, and the brief names it and says why. A named gap is something the reader can judge. A guess is not.</div>
+          </div>
+          <div data-m="decision" style="display: grid; grid-template-columns: 40px minmax(0,1fr) minmax(0,1.15fr); gap: 8px 28px; padding: 22px 0; border-top: 1px solid #E4E0D6; align-items: baseline">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8E897E">04</div>
+            <div style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 600; line-height: 1.3; color: #171512">A claim rests on thin evidence.</div>
+            <div style="font-family: 'Inter Tight', sans-serif; font-size: 15.5px; line-height: 1.55; color: #3D3A33; text-wrap: pretty">The sentence stays, marked inferred, with the reason next to it: commit messages only, or no activity since a date. An absence of activity is reported as an absence, not as a verdict on the team.</div>
+          </div>
+          <div data-m="decision" style="display: grid; grid-template-columns: 40px minmax(0,1fr) minmax(0,1.15fr); gap: 8px 28px; padding: 22px 0; border-top: 1px solid #E4E0D6; align-items: baseline">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8E897E">05</div>
+            <div style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 600; line-height: 1.3; color: #171512">A sentence is rewritten.</div>
+            <div style="font-family: 'Inter Tight', sans-serif; font-size: 15.5px; line-height: 1.55; color: #3D3A33; text-wrap: pretty">GitBrief asks whether to keep the original evidence link, because that evidence was for its own wording. Keep it and the line is labelled edited. Remove it and the line goes out under the user's name, like any other note.</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="s08" data-m="sec" data-screen-label="08" style="padding: 104px 0px 0px;">
@@ -378,7 +411,7 @@
       <p style="font-family: 'Newsreader', serif; font-size: 19px; line-height: 1.62; color: #2B2823; margin: 0 0 40px; max-width: 40em">I tested the working prototype with five people: two founders, two operations leads and a product manager, all at small companies and none with an engineering background. Each session was remote and took about 30 minutes. They read one week's brief from a sample repository, told me what they took from it, and then tried to answer the three questions from section 02. I counted what people did and said rather than asking them to rate it.</p>
       <div data-m="two" style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px">
         <div style="border: 1px solid #E4E0D6; background: #FFFFFF; padding: 26px; border-top: 3px solid #2E7D3B">
-          <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #2E7D3B; margin-bottom: 14px"><span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #2E7D3B; margin-right: 8px; vertical-align: 1px"></span>What users liked</div>
+          <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #2E7D3B; margin-bottom: 14px"><span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #2E7D3B; margin-right: 8px; vertical-align: 1px"></span>What testers liked</div>
           <div style="display: flex; flex-direction: column; border-bottom: 1px solid #E4E0D6">
             <div style="display: grid; grid-template-columns: 48px minmax(0,1fr); gap: 14px; padding: 14px 0; border-top: 1px solid #E4E0D6;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #2E7D3B; padding-top: 2px;">4/5</div><div style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.5; color: #2B2823;">quickly understood what GitBrief does.</div></div>
             <div style="display: grid; grid-template-columns: 48px minmax(0,1fr); gap: 14px; padding: 14px 0; border-top: 1px solid #E4E0D6;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #2E7D3B; padding-top: 2px;">5/5</div><div style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.5; color: #2B2823;">found “Where the work stands” useful.</div></div>
@@ -389,7 +422,7 @@
           </div>
         </div>
         <div style="border: 1px solid #E4E0D6; background: #FFFFFF; padding: 26px; border-top: 3px solid #B4462F">
-          <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #B4462F; margin-bottom: 14px"><span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #B4462F; margin-right: 8px; vertical-align: 1px"></span>What users struggled with</div>
+          <div style="font-size: 10.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: #B4462F; margin-bottom: 14px"><span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #B4462F; margin-right: 8px; vertical-align: 1px"></span>What testers struggled with</div>
           <div style="display: flex; flex-direction: column; border-bottom: 1px solid #E4E0D6">
             <div style="display: grid; grid-template-columns: 48px minmax(0,1fr); gap: 14px; padding: 14px 0; border-top: 1px solid #E4E0D6;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #B4462F; padding-top: 2px;">2/5</div><div style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.5; color: #2B2823;">weren't sure what “Inferred” meant.</div></div>
             <div style="display: grid; grid-template-columns: 48px minmax(0,1fr); gap: 14px; padding: 14px 0; border-top: 1px solid #E4E0D6;"><div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #B4462F; padding-top: 2px;">2/5</div><div style="font-family: 'Newsreader', serif; font-size: 17px; line-height: 1.5; color: #2B2823;">wanted a clearer action on an item needing review.</div></div>
@@ -541,7 +574,7 @@
     <div data-m="wrap" style="max-width: 1080px; margin: 0px auto; padding: 44px 56px; display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
       <div>
         <div style="font-family: Newsreader, serif; font-size: 20px; color: rgb(23, 21, 18);">Adnan Asif Khan</div>
-        <div style="font-size: 13.5px; color: rgb(110, 106, 97); margin-top: 5px;">Product / UX Designer</div>
+        <div style="font-size: 13.5px; color: rgb(110, 106, 97); margin-top: 5px;">Product Designer</div>
       </div>
       <div data-m="flinks" style="display: flex; gap: 22px; flex-wrap: wrap; font-family: &quot;Inter Tight&quot;, sans-serif; font-size: 13.5px;">
         <a href="mailto:adnanasifkhan24@gmail.com">Email</a>
